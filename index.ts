@@ -6,6 +6,7 @@ import { loadCommands, commandHolder } from './core/commands'
 import { loadEvents } from './core/events'
 import { sanitaryInteraction } from './constructors/interaction'
 import { msg } from './core/msg'
+import { sanitzeScripts } from './core/sanitize'
 
 // We'll be using a config.json, and using sanity checks to prevent usage of it.                             
 // Initialize .env into memory
@@ -18,11 +19,11 @@ const client = new eris(process.env.TOKEN, {compress: true, seedVoiceConnections
 client.on('interactionCreate', (interaction: any) => {
   //TODO: passing interaction through willy nilly is a bad idea, we should create a proper safety net.
   //SEE: constructor/interaction.ts
-  commandHolder[interaction.data.name].runCommand(new sanitaryInteraction(interaction))
-
+  // commandHolder[interaction.data.name].runCommand(new sanitaryInteraction(interaction))
+  commandHolder[interaction.data.name].runCommand(interaction)
 })
 
-
+export {msg, sanitzeScripts}
 
 client.on('ready', async () => {
    msg.info("Eris", "Ready as " + client.user.username + "#" + client.user.discriminator)
