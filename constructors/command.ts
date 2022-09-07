@@ -1,4 +1,4 @@
-import Eris from "eris"
+import Eris = require("eris")
 
 abstract class Command {
     constructor(options: {
@@ -75,4 +75,4 @@ abstract class Command {
 
 }
 
-module.exports = Command
+export default Command

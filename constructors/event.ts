@@ -1,4 +1,4 @@
-import Eris from "eris"
+import Eris = require('eris')
  
 abstract class event {
     constructor(
@@ -45,4 +45,4 @@ abstract class event {
 }
 
 
-module.exports = event
+export default event

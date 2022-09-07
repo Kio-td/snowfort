@@ -2,7 +2,7 @@ import { PingInteraction, CommandInteraction, ComponentInteraction, Autocomplete
 
 //I want to make the interaction system more safe and streamlined to use - so that instead of multiple events, you have a unified interaction.
 
-class interaction {
+class sanitaryInteraction {
 
     constructor(parentInteraction: PingInteraction | CommandInteraction | ComponentInteraction | AutocompleteInteraction | UnknownInteraction) {
         switch (parentInteraction.constructor) {
@@ -57,4 +57,4 @@ class interaction {
 
 }
 
-module.exports = interaction
+export {sanitaryInteraction}

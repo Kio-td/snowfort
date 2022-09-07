@@ -1,12 +1,19 @@
 {
-  "name": "pixiepr-sc-eris",
+  "name": "snowfort",
   "version": "1.0.0",
   "main": "index.js",
+  "author": {
+    "name": "Kio",
+    "url": "https://github.com/Kio-td"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.2",
     "eris": "^0.17.1",
     "slash-create": "^5.8.0",
     "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.15"
   }
 }
