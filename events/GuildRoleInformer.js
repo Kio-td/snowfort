@@ -1,5 +1,6 @@
 const path = require('path')
-const eventClass = require('../constructors/event')
+const eventClass = require('../constructors/event.ts')
+
 
 class GuildRoleInformer extends eventClass {
     constructor(cmd) {

@@ -10,7 +10,11 @@
   "dependencies": {
     "dotenv": "^16.0.2",
     "eris": "^0.17.1",
+    "neo-blessed": "^0.2.0",
+    "open": "^8.4.0",
+    "sequelize": "^6.21.4",
     "slash-create": "^5.8.0",
+    "sqlite3": "^5.0.11",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {

@@ -1,11 +1,12 @@
-import Eris from "eris"
-const Command = require("./command")
+import Eris = require('eris')
+import {Command} from './command'
 
 abstract class slashCommand extends Command {
     constructor(
         client: Eris.Client,
         /**
          * The main options for a slashCommand
+         * @required
          */
         options: {
             /**
@@ -48,13 +49,13 @@ abstract class slashCommand extends Command {
                 description?: string | {
                     /**
                      * the long description, as seen by typing "/help <commandname>."
-                     * @required
                      */
-                    longDescription: string,
+                    long: string,
                     /**
                      * the short description, or the summary.
-                     */
-                    shortDescription: string
+                     * @required
+                     * */
+                    short: string
                 },
                 /**
                  * A category name, if it has any. This will show up in the help command.
@@ -66,24 +67,33 @@ abstract class slashCommand extends Command {
              * The Discord Application Command Options.
              * @see https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-structure .
              */
-            options?: {}
+            command?: {},
+            category?: string
         }
     ) {
         super({
             name: options.invoker,
+            guildID: options.guildID,
+            type: 1,
             help: options.help,
-            type: 1
+
         })
         this.invoker = options.invoker
         this.description = options.description
-        this.guildID = options.guildID
-        this.options = options.options
+        // super({
+        //     name: options.invoker,
+        //     help: options.help,
+        //     type: 1
+        // })
+        // this.invoker = options.invoker
+        // this.description = options.description
+        // this.guildID = options.guildID
+        // this.options = options.options
 
 
     }
     readonly invoker: string
     readonly description: string
-    readonly options?: {}
 
     abstract autoComplete?(client: Eris.Client, params?: {}): Promise<void>
 }

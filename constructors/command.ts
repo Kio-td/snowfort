@@ -4,9 +4,9 @@ abstract class Command {
     constructor(options: {
         name: string,
         guildID?: string,
-        default_permission?: boolean,
+        defaultPermission?: boolean,
         type: number,
-        help: {
+        help?: {
             /**
              * should this command show up in help at all?
              */
@@ -26,11 +26,11 @@ abstract class Command {
                  * the long description, as seen by typing "/help <commandname>."
                  * @required
                  */
-                longDescription: string,
+                long: string,
                 /**
                  * the short description, or the summary.
                  */
-                shortDescription: string
+                short: string
             },
             /**
              * A category name, if it has any. This will show up in the help command.
@@ -62,9 +62,8 @@ abstract class Command {
      * onError - runs when an error has been detected by Eris.
      * @param client - A direct passthrough of Eris to the error.
      */
-        async onError(client: Eris.Client, error: Error): Promise<string | boolean | void> {
+    async onError(client: Eris.Client, error: Error): Promise<string | boolean | void> {
         this.error("Looks like we're messing up. Sorry. >>");
-        
     }
     /**
      * runCommand - runs when the command has been invoked.
@@ -75,4 +74,4 @@ abstract class Command {
 
 }
 
-export default Command
+export {Command}

@@ -1,5 +1,5 @@
 import fs = require('fs/promises')
-import { msg } from './msg'
+import { msg } from '../index'
 
 
 const sanitzeScripts = async (type: "event" | "command", location: string): Promise<boolean> => {
@@ -18,4 +18,4 @@ const sanitzeScripts = async (type: "event" | "command", location: string): Prom
     return true
   }
 
-  export default sanitzeScripts
+  export {sanitzeScripts}

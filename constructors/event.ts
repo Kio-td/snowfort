@@ -44,5 +44,5 @@ abstract class event {
     abstract onLoad?(client: Eris.Client | null | undefined): Promise<void | boolean>
 }
 
-
-export default event
+// exports.Event = event
+module.exports = event
