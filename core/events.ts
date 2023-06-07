@@ -1,4 +1,4 @@
-import { msg, sanitzeScripts } from '../index'
+import { msg, sanitzeScripts } from '../index.ts'
 import Eris = require('eris')
 import fs = require('fs/promises')
 import path = require('path')

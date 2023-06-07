@@ -8,16 +8,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.2",
-    "eris": "^0.17.1",
+    "dotenv": "^16.1.4",
+    "eris": "^0.17.2",
     "neo-blessed": "^0.2.0",
-    "open": "^8.4.0",
-    "sequelize": "^6.21.4",
-    "slash-create": "^5.8.0",
-    "sqlite3": "^5.0.11",
+    "open": "^8.4.2",
+    "sequelize": "^6.32.0",
+    "slash-create": "^5.13.0",
+    "sqlite3": "^5.1.6",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@types/node": "^18.7.15"
+    "@types/node": "^18.16.16"
   }
 }

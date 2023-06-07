@@ -8,7 +8,8 @@ let config = {
     homeGuild: "",
     owner: ""
 }
-exports.setup = new Promise(async resolver => {
+exports.setup = async () => {
+    new Promise(async resolver => {
     if (!(!!(await require('fs/promises').stat('../config.json').catch(e => false)))) return resolver()
     else {
 
@@ -446,3 +447,4 @@ exports.setup = new Promise(async resolver => {
     screen.render()
 }
 })
+}

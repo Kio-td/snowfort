@@ -1,5 +1,5 @@
 import fs = require('fs/promises')
-import { msg } from '../index'
+import { msg } from '../index.ts'
 
 
 const sanitzeScripts = async (type: "event" | "command", location: string): Promise<boolean> => {

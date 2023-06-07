@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
-        "lib": ["ES2022"],
+        "lib": ["esnext"],
         "resolveJsonModule": true,
         "moduleResolution": "NodeNext",
         "module": "NodeNext",
-        "target": "ES2022"
+        "target": "ES2022",
+        "allowImportingTsExtensions": true
 
     },
     "exclude": [

@@ -1,6 +1,6 @@
 import { Client } from "eris"
 import { Sequelize, Model, DataTypes } from "sequelize"
-import { msg } from "./msg"
+import { msg } from "../index.ts"
 
 class Database {
     constructor() {
